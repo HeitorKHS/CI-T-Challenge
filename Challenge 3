@@ -1,0 +1,17 @@
+Sorry forgot to save the problem of the question.
+
+def calcula_numero_da_senha(senha):
+    binario = ""
+    for x in range(10):
+      contador = 0
+      for y in range(len(senha)):
+        if senha[y][x] == '1':
+          contador +=1
+        else:
+          contador -=1
+      if contador >= 0:
+        binario = binario + '1'
+      else:
+        binario = binario + '0'
+        
+    return int(binario,2)
