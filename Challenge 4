@@ -1,0 +1,11 @@
+Sorry forgot to save the problem of the question.
+
+def calcula_top_ocorrencias_de_queries(texto,queries,k):
+    dicio = {}
+    resultado = []
+    for x in range(len(queries)):
+      dicio[queries[x]] = texto.count(queries[x])
+    sort = sorted(dicio.items(), key=lambda x:x[1], reverse=True)
+    for y in range(k):
+      resultado.append(sort[y][0])
+    return resultado
