@@ -1,0 +1,7 @@
+Sorry forgot to save the problem of the question.
+
+def calcula_total_leds(altura,largura):
+    if altura <1 or largura < 1:
+      return 0
+    else:
+      return (altura+1)*(largura+1)
