@@ -1,0 +1,12 @@
+Sorry forgot to save the problem of the question.
+
+def checa_numero_escondido(numero,numero_oculto):
+    check = None
+    num_list = list(map(int, str(numero)))
+    num_oculto_list = list(map(int, str(numero_oculto)))
+    for x in range(len(num_oculto_list)):
+      if num_oculto_list[x] in num_list and check != False:
+        check = True
+      else:
+        check = False
+    return check
