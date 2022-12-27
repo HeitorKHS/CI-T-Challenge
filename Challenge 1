@@ -1,0 +1,9 @@
+Sorry forgot to save the problem of the question.
+
+def ultima_parada(combustivel, consumo, pontos_de_gasolina):
+  parada_longe = -1
+  km_litro = combustivel * consumo
+  for i in range(len(pontos_de_gasolina)):
+    if km_litro >= pontos_de_gasolina[i] and pontos_de_gasolina[i] > parada_longe:
+      parada_longe = pontos_de_gasolina[i]
+  return parada_longe
