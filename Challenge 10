@@ -1,0 +1,13 @@
+Sorry forgot to save the problem of the question.
+
+import math
+
+def shuffle_musicas(musicas_tocadas):
+    musicas_tocadas.sort(reverse=True)
+    mais_tocadas = musicas_tocadas[0:math.ceil(len(musicas_tocadas)/2)]
+    menos_tocadas = musicas_tocadas[math.ceil(len(musicas_tocadas)/2):len(musicas_tocadas)]
+    menos_tocadas.sort()
+    resultado = musicas_tocadas
+    resultado[::2] = mais_tocadas
+    resultado[1::2] = menos_tocadas
+    return resultado
