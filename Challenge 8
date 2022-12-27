@@ -1,0 +1,23 @@
+Sorry forgot to save the problem of the question.
+
+
+def escolhe_taxi(tf1,vqr1,tf2,vqr2):
+  tf1 = float(tf1)
+  vqr1 = float(vqr1)
+  tf2 = float(tf2)
+  vqr2 = float(vqr2)
+  if tf1 == tf2 and vqr1 == vqr2:
+    return "Tanto faz"
+  elif (tf1 == tf2 and vqr1 > vqr2) or (vqr1 == vqr2 and tf1 > tf2) or (vqr1+tf1 >= vqr2+tf2 and vqr1 > vqr2):
+    return "Empresa 2"
+  elif (tf1 == tf2 and vqr2 > vqr1) or (vqr1 == vqr2 and tf2 > tf1) or (vqr2+tf2 >= vqr1+tf1 and vqr2 > vqr1):
+    return "Empresa 1"
+  else:
+    if tf2+vqr2 > tf1+vqr1:
+      num = abs((tf1-tf2)/(vqr1-vqr2))
+      num = float(f"{num:.2f}")
+      return f"Empresa 1 quando a distância < {num}, Tanto faz quando a distância = {num}, Empresa 2 quando a distância > {num}"
+    else:
+      num = abs((tf2-tf1)/(vqr2-vqr1))
+      num = float(f"{num:.2f}")
+      return f"Empresa 2 quando a distância < {num}, Tanto faz quando a distância = {num}, Empresa 1 quando a distância > {num}"
