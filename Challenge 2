@@ -1,0 +1,16 @@
+Sorry forgot to save the problem of the question.
+
+def retorna_menor_e_maior_valor_de_vendas(tickets):
+    maior = None
+    menor = None
+    for x in range(len(tickets)):
+      for y in range(len(tickets[x])):
+        if tickets[x][y] == 0 or tickets[x][y] < 20 or tickets[x][y] > 500: continue
+        
+        if maior == None or tickets[x][y] > maior:
+          maior = tickets[x][y]
+        
+        if menor == None or tickets[x][y] < menor:
+          menor = tickets[x][y]
+    
+    return [menor,maior]
