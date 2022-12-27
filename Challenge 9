@@ -1,0 +1,17 @@
+Sorry forgot to save the problem of the question.
+
+import itertools
+
+def menor_string_maior(name):
+  combinacoes = list(itertools.permutations(name,len(name)))
+  maior = None
+  for x in range(1,len(combinacoes)):
+    if maior == None and combinacoes[x] > combinacoes[0]:
+      maior = combinacoes[x] 
+    elif combinacoes[x] > combinacoes[0] and combinacoes[x] < maior:
+      maior = combinacoes[x]
+  if maior == None:
+    return "sem resposta"
+  else:
+    maior = ''.join(maior)
+    return maior
